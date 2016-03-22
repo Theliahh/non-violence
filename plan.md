@@ -10,7 +10,7 @@
   *  Gather age/gender/location first
   * Questions served using Angular and HTTP Get/Post
   * Progress and answers saved using cookies
-* -Statistics page
+* Statistics page
   * Map of NVT score averages in each state/country??? 
   * Average NVT score of humanity
   * Age group scores
