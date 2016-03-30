@@ -12,7 +12,9 @@
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final" 
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
+    "angularjs": "1.5.3",
+    "Microsoft.ApplicationInsights.AspNet": "1.0.0-beta8"
   },
 
   "commands": {
