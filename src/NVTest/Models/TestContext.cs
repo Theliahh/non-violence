@@ -5,6 +5,12 @@ namespace NVTest.Models
 {
     public class TestContext : DbContext
     {
+
+        public TestContext()
+        {
+            Database.EnsureCreated();
+        }
+
         public DbSet<Question> Questions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

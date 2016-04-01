@@ -40,7 +40,6 @@ namespace NVTest
                 .AddSqlServer()
                 .AddDbContext<TestContext>();
             services.AddApplicationInsightsTelemetry(Configuration);
-
             
         }
 
