@@ -41,6 +41,7 @@ namespace NVTest
                 .AddDbContext<TestContext>();
 
             services.AddTransient<TestContextSeedData>();
+            services.AddScoped<ITestRepository, TestRepository>();
 
             services.AddApplicationInsightsTelemetry(Configuration);
             

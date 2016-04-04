@@ -7,14 +7,14 @@ namespace NVTest.Controllers.Web
 {
     public class HomeController : Controller
     {
-        TestContext _context;
-        public HomeController(TestContext context)
+        private ITestRepository _repository;
+        public HomeController(ITestRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
         public IActionResult Index()
         {
-            var questions = _context.Questions.OrderBy(t => t.QuestionText).ToList();
+            var questions = _repository.GetAllQuestions();
             return View(questions);
         }
 
