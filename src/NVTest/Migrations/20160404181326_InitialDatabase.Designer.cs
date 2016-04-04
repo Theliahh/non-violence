@@ -8,7 +8,7 @@ using NVTest.Models;
 namespace NVTest.Migrations
 {
     [DbContext(typeof(TestContext))]
-    [Migration("20160401034551_InitialDatabase")]
+    [Migration("20160404181326_InitialDatabase")]
     partial class InitialDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,6 +21,8 @@ namespace NVTest.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int>("QuestionNumber");
 
                     b.Property<string>("QuestionText");
 

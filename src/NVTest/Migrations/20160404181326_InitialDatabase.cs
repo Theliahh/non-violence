@@ -15,6 +15,7 @@ namespace NVTest.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    QuestionNumber = table.Column<int>(nullable: false),
                     QuestionText = table.Column<string>(nullable: true),
                     firstChoice = table.Column<string>(nullable: true),
                     isRelevant = table.Column<bool>(nullable: false),

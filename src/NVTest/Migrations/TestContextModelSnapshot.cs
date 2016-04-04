@@ -21,6 +21,8 @@ namespace NVTest.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("QuestionNumber");
+
                     b.Property<string>("QuestionText");
 
                     b.Property<string>("firstChoice");

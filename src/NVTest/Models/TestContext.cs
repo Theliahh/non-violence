@@ -16,7 +16,7 @@ namespace NVTest.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            var connString = Startup.Configuration["Data:TestContextConnection"];
+            var connString = Startup.Configuration["Data:RealContextConnection"];
             optionsBuilder.UseSqlServer(connString);
 
             base.OnConfiguring(optionsBuilder);

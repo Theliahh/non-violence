@@ -14,8 +14,8 @@ namespace NVTest.Controllers.Web
         }
         public IActionResult Index()
         {
-            //var questions = _context.Questions.OrderBy(t => t.QuestionText).ToList();
-            return View();
+            var questions = _context.Questions.OrderBy(t => t.QuestionText).ToList();
+            return View(questions);
         }
 
         public IActionResult About()
