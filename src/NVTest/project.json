@@ -6,6 +6,7 @@
 
   "dependencies": {
     "angularjs": "1.5.3",
+    "angularjs.TypeScript.DefinitelyTyped": "6.1.0",
     "bootstrap": "3.3.6",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.Core": "7.0.0-rc1-final",

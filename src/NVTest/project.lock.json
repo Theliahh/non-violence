@@ -6,7 +6,7 @@
       "angularjs/1.5.3": {
         "type": "package"
       },
-      "angularjs.TypeScript.DefinitelyTyped/6.0.9": {
+      "angularjs.TypeScript.DefinitelyTyped/6.1.0": {
         "type": "package",
         "dependencies": {
           "jquery.TypeScript.DefinitelyTyped": null
@@ -1814,7 +1814,7 @@
       "angularjs/1.5.3": {
         "type": "package"
       },
-      "angularjs.TypeScript.DefinitelyTyped/6.0.9": {
+      "angularjs.TypeScript.DefinitelyTyped/6.1.0": {
         "type": "package",
         "dependencies": {
           "jquery.TypeScript.DefinitelyTyped": null
@@ -4284,7 +4284,7 @@
       "angularjs/1.5.3": {
         "type": "package"
       },
-      "angularjs.TypeScript.DefinitelyTyped/6.0.9": {
+      "angularjs.TypeScript.DefinitelyTyped/6.1.0": {
         "type": "package",
         "dependencies": {
           "jquery.TypeScript.DefinitelyTyped": null
@@ -6095,7 +6095,7 @@
       "angularjs/1.5.3": {
         "type": "package"
       },
-      "angularjs.TypeScript.DefinitelyTyped/6.0.9": {
+      "angularjs.TypeScript.DefinitelyTyped/6.1.0": {
         "type": "package",
         "dependencies": {
           "jquery.TypeScript.DefinitelyTyped": null
@@ -7906,7 +7906,7 @@
       "angularjs/1.5.3": {
         "type": "package"
       },
-      "angularjs.TypeScript.DefinitelyTyped/6.0.9": {
+      "angularjs.TypeScript.DefinitelyTyped/6.1.0": {
         "type": "package",
         "dependencies": {
           "jquery.TypeScript.DefinitelyTyped": null
@@ -10862,7 +10862,7 @@
       "angularjs/1.5.3": {
         "type": "package"
       },
-      "angularjs.TypeScript.DefinitelyTyped/6.0.9": {
+      "angularjs.TypeScript.DefinitelyTyped/6.1.0": {
         "type": "package",
         "dependencies": {
           "jquery.TypeScript.DefinitelyTyped": null
@@ -14608,12 +14608,12 @@
         "content/Scripts/version.json"
       ]
     },
-    "angularjs.TypeScript.DefinitelyTyped/6.0.9": {
+    "angularjs.TypeScript.DefinitelyTyped/6.1.0": {
       "type": "package",
-      "sha512": "JVNO8TSvakKUImU/IDBMoZ2Y5kuHfUgq3Z/VcTfOiueOAQS/rylTM8Ahm7Stn+zKhbd4dOnEQVy1PjC+lQjQAw==",
+      "sha512": "jhqdc44g68SW0dsxjEFkCNCF6V/Jg+zuMnwSia1Oak43Xqa+7cMDfiIXCV1UGM4LmBBFrZaB/yJChzS/eurfrQ==",
       "files": [
-        "angularjs.TypeScript.DefinitelyTyped.6.0.9.nupkg",
-        "angularjs.TypeScript.DefinitelyTyped.6.0.9.nupkg.sha512",
+        "angularjs.TypeScript.DefinitelyTyped.6.1.0.nupkg",
+        "angularjs.TypeScript.DefinitelyTyped.6.1.0.nupkg.sha512",
         "angularjs.TypeScript.DefinitelyTyped.nuspec",
         "Content/Scripts/typings/angularjs/angular.d.ts",
         "Content/Scripts/typings/angularjs/angular-animate.d.ts",
@@ -20119,7 +20119,7 @@
   "projectFileDependencyGroups": {
     "": [
       "angularjs >= 1.5.3",
-      "angularjs.TypeScript.DefinitelyTyped >= 6.0.9",
+      "angularjs.TypeScript.DefinitelyTyped >= 6.1.0",
       "bootstrap >= 3.3.6",
       "EntityFramework.Commands >= 7.0.0-rc1-final",
       "EntityFramework.Core >= 7.0.0-rc1-final",
