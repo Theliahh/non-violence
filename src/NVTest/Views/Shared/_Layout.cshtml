@@ -1,8 +1,6 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +14,8 @@
     @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
 </head>
 
 <body>
@@ -51,6 +50,5 @@
             <p>&copy; 2016 - Garrett Musto</p>
         </footer>
     </div>
-
 </body>
 </html>     
