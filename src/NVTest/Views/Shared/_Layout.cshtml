@@ -1,31 +1,45 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
 <!DOCTYPE html>
 <html>
 <head>
     <base href="/">
-    <title>The Official NVT Website</title>
+    <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/bootswatch/superhero/bootstrap.min.css" />
 
     <link rel="stylesheet" href="~/style.css">
+    @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
-                </li>
-            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a asp-controller="Home" asp-action="About">About the Test</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="VK">About V.K. Kool</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container body-content">
@@ -36,6 +50,5 @@
             <p>&copy; 2016 - Garrett Musto</p>
         </footer>
     </div>
-
 </body>
 </html>     
