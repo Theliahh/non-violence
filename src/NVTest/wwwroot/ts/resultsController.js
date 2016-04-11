@@ -5,18 +5,36 @@
         .module('app')
         .controller('resultsController', resultsController);
 
-    resultsController.$inject = ['$location']; 
 
-    function resultsController($location) {
+    function resultsController($http) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'resultsController';
-
+        vm.isBusy = false;
+        vm.ages = [];
         getResults();
 
         function getResults()
         {
+            vm.ages = [
+                {}
+            ]
+        }
 
+        vm.addResult = function () {
+            vm.isBusy = true;
+
+            $http.post("/api/results", vm.newResult)
+            .then(function (response) {
+                //success
+                
+            }, function () {
+                //failure
+
+            })
+            .finally(function () {
+                vm.isBusy = false;
+            });
         }
     }
 })();

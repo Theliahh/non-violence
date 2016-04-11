@@ -43,10 +43,12 @@ namespace NVTest
                 });
             services.AddEntityFramework()
                 .AddSqlServer()
+                .AddDbContext<ResultsContext>()
                 .AddDbContext<TestContext>();
 
             services.AddSingleton<TestContextSeedData>();
             services.AddScoped<ITestRepository, TestRepository>();
+            services.AddScoped<IResultsRepository, ResultsRepository>();
 
             services.AddApplicationInsightsTelemetry(Configuration);
             

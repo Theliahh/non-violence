@@ -8,9 +8,11 @@ namespace NVTest.Controllers.Web
     public class HomeController : Controller
     {
         private ITestRepository _repository;
-        public HomeController(ITestRepository repository)
+        private IResultsRepository _resultsRepository;
+        public HomeController(ITestRepository repository, IResultsRepository resultsRepository)
         {
             _repository = repository;
+            _resultsRepository = resultsRepository;
         }
         public IActionResult Index()
         {
