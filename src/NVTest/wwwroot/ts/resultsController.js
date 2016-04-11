@@ -24,6 +24,11 @@
           { name: 'Non-Binary' },
           {name:'Transgender'}
         ];
+
+        vm.mAvg = 0;
+        vm.fAvg = 0;
+        vm.nbAvg = 0;
+        vm.trAvg = 0;
         vm.onlyNumbers = /^\d+$/;
         getResults();
 
@@ -68,5 +73,33 @@
                 window.location = '/NVT/results';
             });
         }
+        
+        vm.getStats = function () {
+            $http.get("/api/results/gender", "Male")
+            .then(function (response) {
+                console.log(response.data);
+                vm.mAvg = response.data;
+            }, function() {
+
+            });
+            $http.get("/api/results/gender", "female")
+            .then(function (response) {
+                vm.fAvg = response.data;
+            }, function () {
+
+            }); $http.get("/api/results/gender", "non-binary")
+            .then(function (response) {
+                vm.nbAvg = response.data;
+            }, function () {
+
+            }); $http.get("/api/results/gender", "transgender")
+            .then(function (response) {
+                vm.trAvg = response.data;
+            }, function () {
+
+            });
+            
+        }
+        vm.getStats();
     }
 })();

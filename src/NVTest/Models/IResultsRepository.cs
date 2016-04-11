@@ -6,6 +6,7 @@ namespace NVTest.Models
     {
         float ScoreForAgeGroup(int low, int high);
         float ScoreForGender(string gender);
+        void AddNewResult(Result newResult);
 
     }
 }

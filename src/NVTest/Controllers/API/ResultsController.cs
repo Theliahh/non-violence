@@ -15,10 +15,15 @@ namespace NVTest.Controllers.API
         {
             _repository = repository;
         }
-
+        [HttpGet("api/results/gender")]
+        public float GetGenderAverage([FromBody]string gender)
+        {
+            return _repository.ScoreForGender(gender);
+        }
         [HttpPost("api/results")]
         public JsonResult PostToDb([FromBody]Result newResult)
         {
+            _repository.AddNewResult(newResult);
             return Json(newResult);
         }
 
