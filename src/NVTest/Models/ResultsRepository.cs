@@ -37,5 +37,11 @@ namespace NVTest.Models
             avgScore = avgScore / scores.Count;
             return avgScore;
         }
+
+        public void AddNewResult(Result newResult)
+        {
+            _context.Add(newResult);
+            _context.SaveChanges();
+        }
     }
 }
