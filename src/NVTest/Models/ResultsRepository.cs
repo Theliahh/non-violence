@@ -28,7 +28,7 @@ namespace NVTest.Models
 
         public float ScoreForGender(string gender)
         {
-            List<Result> scores = _context.Results.Where(c => c.Gender == gender).ToList();
+            List<Result> scores = _context.Results.Where(c => c.Gender.Equals(gender)).ToList();
             float avgScore = 0;
             foreach (var item in scores)
             {

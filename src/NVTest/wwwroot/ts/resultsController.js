@@ -73,26 +73,29 @@
                 window.location = '/NVT/results';
             });
         }
-        
+        vm.maleRequest = { "gender": "Male" };
+        vm.femaleRequest = {"gender" : "Female"}
+        vm.nbRequest = {"gender":"Non-binary"}
+        vm.transRequest = { "gender": "Transgender" };
         vm.getStats = function () {
-            $http.get("/api/results/gender", "Male")
+            $http.post("/api/results/gender", vm.maleRequest )
             .then(function (response) {
                 console.log(response.data);
                 vm.mAvg = response.data;
             }, function() {
 
             });
-            $http.get("/api/results/gender", "female")
+            $http.post("/api/results/gender", vm.femaleRequest)
             .then(function (response) {
                 vm.fAvg = response.data;
             }, function () {
 
-            }); $http.get("/api/results/gender", "non-binary")
+            }); $http.post("/api/results/gender", vm.nbRequest)
             .then(function (response) {
                 vm.nbAvg = response.data;
             }, function () {
 
-            }); $http.get("/api/results/gender", "transgender")
+            }); $http.post("/api/results/gender", vm.transRequest)
             .then(function (response) {
                 vm.trAvg = response.data;
             }, function () {

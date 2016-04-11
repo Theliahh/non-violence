@@ -21,7 +21,7 @@
             <a ng-hide="test.isBusy" class="list-group-item" ng-click="test.answeredQuestion(2)">2.{{test.Question.secondChoice}}</a>
         </div>
     </div> 
-    Progress: {{test.Question.questionNumber}}/65 Score: {{test.score}}
+    Progress: {{test.Question.questionNumber}}/65
     <div class="progress progress-striped active">
         <div class="progress-bar" style="width: {{(test.Question.questionNumber/65)*100}}%"></div>
     </div>
