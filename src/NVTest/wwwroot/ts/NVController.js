@@ -41,15 +41,24 @@
 
         vm.nextQuestion = function () {
             //Make httpget call here
-            vm.Question.questionNumber++;
-            $http.get("api/question/" + vm.Question.questionNumber)
-            .then(function (response) {
-                //success
-                angular.copy(response.data, vm.Question);
-            }, function (error) {
-                //failure
-                vm.errorMessage = "Failed to load question" + error;
-            }); 
+            if (vm.Question.questionNumber < 65)
+            {
+                vm.Question.questionNumber++;
+                $http.get("api/question/" + vm.Question.questionNumber)
+                .then(function (response) {
+                    //success
+                    angular.copy(response.data, vm.Question);
+                }, function (error) {
+                    //failure
+                    vm.errorMessage = "Failed to load question" + error;
+                });
+            }
+            else
+            {
+                //Test is over
+                window.location = "/NVT/results";
+            }
+
         }
 
         vm.nextQuestion();

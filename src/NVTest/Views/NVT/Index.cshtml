@@ -1,7 +1,9 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@ViewBag.Title = "The Non-Violence Test"
+@{
+    ViewBag.Title = "The Non-Violence Test";
+}
 <script src="~/ts/NVController.js"></script>
 <link rel="stylesheet" href="~/css/testStyle.css" />
 
@@ -18,6 +20,7 @@
             <a class="list-group-item" ng-click="test.answeredQuestion(2)">2.{{test.Question.secondChoice}}</a>
         </div>
     </div> 
+    Progress: {{test.Question.questionNumber}}/65 Score: {{test.score}}
     <div class="progress progress-striped active">
         <div class="progress-bar" style="width: {{(test.Question.questionNumber/65)*100}}%"></div>
     </div>

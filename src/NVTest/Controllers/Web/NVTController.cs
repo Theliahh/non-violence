@@ -15,5 +15,9 @@ namespace NVTest.Views.NVTest
         {
             return View();
         }
+        public IActionResult Results()
+        {
+            return View();
+        }
     }
 }
