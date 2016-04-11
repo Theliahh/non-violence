@@ -16,6 +16,13 @@
             "gender": "",
             "score" : 0
         };
+
+        vm.genderOptions = [
+          { name: 'Male' },
+          { name: 'Female' },
+          { name: 'Non-Binary' },
+          {name:'Transgender'}
+        ];
         vm.onlyNumbers = /^\d+$/;
         getResults();
 
