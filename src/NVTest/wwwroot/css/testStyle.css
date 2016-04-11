@@ -1,0 +1,11 @@
+
+/*CSS for the test page*/
+
+.well a {
+    cursor:pointer;
+    padding: 30px;
+}
+
+.well li:hover{
+    background-color: whitesmoke;
+}

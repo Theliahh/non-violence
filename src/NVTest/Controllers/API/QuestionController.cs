@@ -22,5 +22,12 @@ namespace NVTest.Controllers.API
 
             return Json(results);
         }
+        [HttpGet("api/question/{id}")]
+        public JsonResult GetQuestionByNumber(int id)
+        {
+            var results = _repository.GetQuestionByNumber(id);
+
+            return Json(results);
+        }
     }
 }

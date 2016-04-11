@@ -45,7 +45,7 @@ namespace NVTest
                 .AddSqlServer()
                 .AddDbContext<TestContext>();
 
-            services.AddTransient<TestContextSeedData>();
+            services.AddSingleton<TestContextSeedData>();
             services.AddScoped<ITestRepository, TestRepository>();
 
             services.AddApplicationInsightsTelemetry(Configuration);
@@ -53,7 +53,7 @@ namespace NVTest
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, TestContextSeedData seeder)
+        public void Configure(IApplicationBuilder app, IServiceProvider serviceProvider)
         {
             app.UseApplicationInsightsRequestTelemetry();
             app.UseApplicationInsightsExceptionTelemetry();
@@ -67,7 +67,7 @@ namespace NVTest
                   defaults: new { controller = "Home", action = "Index" }
                   );
             });
-
+            var seeder = serviceProvider.GetService<TestContextSeedData>();
             seeder.EnsureSeedData();
         }
 

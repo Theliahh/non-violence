@@ -1,16 +1,24 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@ViewBag.Title = "The Non-Violence Test"
+<script src="~/ts/NVController.js"></script>
+<link rel="stylesheet" href="~/css/testStyle.css" />
 
-<div class="nvtContainer" ng-app>
+<div class="nvtContainer" ng-controller="NVController as test">
     <div class="well well-lg">
         Remember to answer the questions as truthfully as possible.
     </div>
     <div class="well">
-        (Question Number) (Question)
-        <ol>
-            <li>Choice 1</li>
-            <li>Choice 2</li>
-        </ol>
+        {{test.Question.questionNumber}}. {{test.Question.questionText}}
+        <hr />
+        <br />
+        <div class="list-group">
+            <a class="list-group-item" ng-click="test.answeredQuestion(1)">1.{{test.Question.firstChoice}}</a>
+            <a class="list-group-item" ng-click="test.answeredQuestion(2)">2.{{test.Question.secondChoice}}</a>
+        </div>
     </div> 
+    <div class="progress progress-striped active">
+        <div class="progress-bar" style="width: {{(test.Question.questionNumber/65)*100}}%"></div>
+    </div>
 </div>
