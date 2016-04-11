@@ -1,17 +1,18 @@
 <link rel="stylesheet" href="~/css/survey.css" />
 
 <div ng-controller="resultsController as vm">
-    <form novalidate name="newResultForm" class="form-horizontal">
+    <form novalidate name="newResultForm" class="form-horizontal" ng-submit="vm.addResult()">
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
                 <label for="age">Age</label>
-                <input class="form-control" name="age" type="text" ng-model="vm.newresult.age" ng-pattern="vm.onlyNumbers" ng-maxlength="2"size="2" />
+                <input class="form-control" name="age" type="text" ng-model="vm.newResult.age" ng-pattern="vm.onlyNumbers" ng-change="vm.checkAge()" required ng-maxlength="2" />
+                <span ng-hide="vm.isAgeGood">Age must be between 13 and 99</span>
             </div>
         </div>
         <div class="form-group">
             <div class="col-lg-12 col-lg-offset-2">
                 <label for="gender">Gender</label>
-                <select class="form-control" name="gender" ng-model="vm.newresult.gender"
+                <select class="form-control" required name="gender" ng-model="vm.newResult.gender"
                         
                         ng-options="gender.name for gender in vm.genderOptions">
                     
@@ -20,9 +21,9 @@
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-                <button type="reset" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-info">Skip</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+                <button ng-disabled="newResultForm.$invalid || !vm.isAgeGood" type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" ng-click="vm.skipSurvey()" class="btn btn-info">Skip</button>
             </div>
         </div>
     </form>

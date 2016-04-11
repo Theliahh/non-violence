@@ -16,8 +16,9 @@
         <hr />
         <br />
         <div class="list-group">
-            <a class="list-group-item" ng-click="test.answeredQuestion(1)">1.{{test.Question.firstChoice}}</a>
-            <a class="list-group-item" ng-click="test.answeredQuestion(2)">2.{{test.Question.secondChoice}}</a>
+            <i  ng-show="test.isBusy" class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom" ng-class="{'fa-pulse' : test.isBusy}"></i>
+            <a  ng-hide="test.isBusy" class="list-group-item" ng-click="test.answeredQuestion(1)">1.{{test.Question.firstChoice}}</a>
+            <a ng-hide="test.isBusy" class="list-group-item" ng-click="test.answeredQuestion(2)">2.{{test.Question.secondChoice}}</a>
         </div>
     </div> 
     Progress: {{test.Question.questionNumber}}/65 Score: {{test.score}}

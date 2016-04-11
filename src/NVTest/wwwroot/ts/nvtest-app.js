@@ -1,6 +1,6 @@
 (function () {
     "use strict";
 
-    angular.module("NVTapp", [])
+    angular.module("NVTapp", ['ngCookies'])
 
 })();
