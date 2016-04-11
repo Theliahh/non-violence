@@ -3,7 +3,7 @@
 
     "use strict";
     
-    angular.module("NVTapp")
+    angular.module("NVTapp",['ngAnimate'])
         .controller("NVController", nvController);
     
     function nvController($http) {
