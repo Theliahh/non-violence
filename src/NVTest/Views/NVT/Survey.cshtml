@@ -1,0 +1,8 @@
+<div ng-controller="resultsController as vm">
+    <form novalidate name="newResultForm">
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input class="form-control" name="age" type="text" ng-model="vm.newresult.age" ng-pattern="vm.onlyNumbers" ng-maxlength="2" />
+        </div>
+    </form>
+</div>

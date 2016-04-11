@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('NVTapp')
         .controller('resultsController', resultsController);
 
 
@@ -11,14 +11,21 @@
         var vm = this;
         vm.title = 'resultsController';
         vm.isBusy = false;
-        vm.ages = [];
+        vm.newResult = {
+            "age": 0,
+            "gender": "",
+            "score" : 0
+        };
+        vm.onlyNumbers = /^\d+$/;
         getResults();
 
         function getResults()
         {
-            vm.ages = [
-                {}
-            ]
+            
+        }
+
+        vm.getScore = function () {
+            //Get score from cookie
         }
 
         vm.addResult = function () {
