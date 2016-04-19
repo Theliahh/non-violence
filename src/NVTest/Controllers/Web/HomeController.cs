@@ -24,6 +24,11 @@ namespace NVTest.Controllers.Web
         {
             return View();
         }
+
+        public IActionResult AboutMe()
+        {
+            return View();
+        }
         public IActionResult VK()
         {
             return View();

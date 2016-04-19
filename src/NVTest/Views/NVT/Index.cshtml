@@ -1,7 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewBag.Title = "The Non-Violence Test";
 }
 <script src="~/ts/NVController.js"></script>
@@ -9,7 +6,14 @@
 
 <div class="nvtContainer" ng-controller="NVController as test">
     <div class="well well-lg">
-        Remember to answer the questions as truthfully as possible.
+        <p>
+            For each question, two choices will be presented. Please read the question, then the choices, and select which
+            answer best fits how you would react or think in the given situation.
+            <br />
+            Click on the answer you wish to submit. Your answers will be shown to nobody else and you will remain completely anonymous.
+            No personal information is required to retrieve your score. The test can be exited at any time.
+        </p>
+
     </div>
     <div class="well">
         {{test.Question.questionNumber}}. {{test.Question.questionText}}
