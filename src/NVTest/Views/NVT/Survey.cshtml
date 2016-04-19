@@ -1,6 +1,17 @@
 <link rel="stylesheet" href="~/css/survey.css" />
 
 <div ng-controller="resultsController as vm">
+
+    <div class="well well-lg">
+        <h3>The test is complete</h3>
+        <p>You have completed the NVT. Your results are available to you now. If you would like, enter your gender for use
+        in collecting statistical information.</p>
+        <p>
+            Only your score and gender will be recorded and stored.  No personally identifiable information will be recorded
+            and your score will remain completely anonymous.
+        </p>
+    </div>
+
     <form novalidate name="newResultForm" class="form-horizontal" ng-submit="vm.addResult()">
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
