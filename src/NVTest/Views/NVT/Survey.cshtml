@@ -4,13 +4,13 @@
 
     <div class="well well-lg">
         <h3>The test is complete</h3>
-        <p>You have completed the NVT. Your results are available to you now. If you would like, enter your gender for use
+        <p>You have completed the NVT. <br />Your results are available to you now. If you prefer, enter your gender for use
         in collecting statistical information.</p>
         <p>
-            Only your score and gender will be recorded and stored.  No personally identifiable information will be recorded
+            Only your score and gender will be recorded and stored.  No personal/identifiable information will be recorded
             and your score will remain completely anonymous.
             <br />
-            If you would like to skip this step, please click skip. You will receive your score regardless.
+            You do not have to respond here and you can click "skip" below. You will receive your score regardless.
         </p>
     </div>
 
@@ -29,7 +29,7 @@
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
                 <button type="reset" class="btn btn-default">Reset</button>
-                <button ng-disabled="newResultForm.$invalid || !vm.isAgeGood" type="submit" class="btn btn-primary">Submit</button>
+                <button ng-disabled="newResultForm.$invalid" type="submit" class="btn btn-primary">Submit</button>
                 <button type="button" ng-click="vm.skipSurvey()" class="btn btn-info">Skip</button>
             </div>
         </div>

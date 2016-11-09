@@ -39,18 +39,6 @@
             vm.newResult.score = vm.score;
         }
 
-        vm.checkAge = function()
-        {
-            if (vm.newResult.age < 100 && vm.newResult.age >= 13)
-            {
-                vm.isAgeGood = true;
-            }
-            else
-            {
-                vm.isAgeGood = false;
-            }
-        }
-
         vm.skipSurvey = function()
         {
             window.location = '/NVT/results';
