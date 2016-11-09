@@ -2,7 +2,11 @@
 
 body{
     font-family:sans-serif;
+<<<<<<< HEAD
     font-size: 18px;
+=======
+    font-size: 14px;
+>>>>>>> refs/remotes/origin/master
 }
 
 label{
@@ -11,4 +15,8 @@ label{
 
 input{
     width: 150px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> refs/remotes/origin/master
