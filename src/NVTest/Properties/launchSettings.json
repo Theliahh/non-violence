@@ -3,14 +3,21 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
+<<<<<<< HEAD
+      "applicationUrl": "http://localhost:8000/",
+=======
       "applicationUrl": "http://localhost:56564/",
+>>>>>>> refs/remotes/origin/master
       "sslPort": 0
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
+<<<<<<< HEAD
+=======
       "launchBrowser": true,
+>>>>>>> refs/remotes/origin/master
       "environmentVariables": {
         "Hosting:Environment": "Development"
       }

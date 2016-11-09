@@ -1,0 +1,32 @@
+@{
+    ViewBag.Title = "NVT Results";
+}
+
+<div ng-controller="resultsController as vm">
+    <div class="jumbotron">
+        <h2>Results</h2>
+        <h4>Non-Violence Score: </h4>
+        <p>With a maximum possible score of 36, your score is {{vm.score}}.</p>
+        <p>
+            Additional information about the test and your results can be examined in various publications:
+            <ul>
+                <li>
+                    <a href="https://he.palgrave.com/page/detail/?sf1=barcode&st1=9780230545540">Psychology of Nonviolence and Aggression. Macmillan-Palgrave Publishers USA &amp; UK, Kool, V.K. (2008) </a>Psychology of Nonviolence and Aggression. Macmillan-Palgrave Publishers USA &amp; UK, Kool, V.K. (2008) 
+                </li>
+                <li>
+                    <a href="https://books.google.com/books/about/Nonviolence.html?id=cFfaAAAAIAAJ">Nonviolence: Social and Psychological Issues. Kool, V.K.(1993) University Press of America: Lanham, MD</a>
+                </li>
+                <li>
+                    <a href="https://books.google.com/books?id=iXnZBQAAQBAJ&dq=perspectives+on+nonviolence&source=gbs_navlinks_s">Perspectives on Nonviolence. Kool, V.K. (1990) Springer-Verlag: New York</a>
+                </li>
+            </ul>
+        </p>
+    </div>
+    @*<div class="well well-lg">
+        <h4>How do I stack up?</h4>
+        <p>Average score for Male participants: {{vm.mAvg}}</p>
+        <p>Average score for Female participants: {{vm.fAvg}} </p>
+        <p>Average score for Non-Binary participants: {{vm.nbAvg}}</p>
+        <p>Average score for Transgender participants: {{vm.trAvg}}</p>
+    </div>*@
+</div>

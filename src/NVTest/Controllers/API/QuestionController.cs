@@ -5,43 +5,29 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using NVTest.Models;
 
-// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace NVTest.Controllers.API
 {
-    [Route("api/[controller]")]
     public class QuestionController : Controller
     {
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        ITestRepository _repository;
+        public QuestionController(ITestRepository repository)
         {
-            return new string[] { "value1", "value2" };
+            _repository = repository;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("api/questions")]
+        public JsonResult Get()
         {
-            return "value";
-        }
+            var results = _repository.GetAllQuestions();
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
+            return Json(results);
         }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpGet("api/question/{id}")]
+        public JsonResult GetQuestionByNumber(int id)
         {
-        }
+            var results = _repository.GetQuestionByNumber(id);
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return Json(results);
         }
     }
 }

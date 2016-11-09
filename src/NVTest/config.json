@@ -1,0 +1,13 @@
+{
+  "AppSettings": {
+
+  },
+  "Data": {
+    "TestContextConnection": "Server=(localdB)\\ProjectsV12;Database=TestDb;Trusted_Connection=true;MultipleActiveResultSets=true;",
+    "RealContextConnection": "Server=tcp:nvdb.database.windows.net,1433;Database=QuestionDb;User ID=gmusto@nvdb;Password=FlamesHero4356@;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    "ResultsContextConnection": "Server=tcp:nvdb.database.windows.net,1433;Database=ResultsDb;User ID=gmusto@nvdb;Password=FlamesHero4356@;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+  },
+  "ApplicationInsights": {
+    "InstrumentationKey": "2005140a-dabd-491d-8c12-305c8c89250f"
+  }
+}

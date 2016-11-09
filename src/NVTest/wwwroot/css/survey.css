@@ -1,0 +1,9 @@
+/*Survey styles*/
+
+.form-horizontal input{
+    width: 60px;
+}
+
+.form-horizontal select{
+    width: auto;
+}

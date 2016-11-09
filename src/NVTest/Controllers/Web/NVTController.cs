@@ -15,5 +15,13 @@ namespace NVTest.Views.NVTest
         {
             return View();
         }
+        public IActionResult Results()
+        {
+            return View();
+        }
+        public IActionResult Survey()
+        {
+            return View();
+        }
     }
 }

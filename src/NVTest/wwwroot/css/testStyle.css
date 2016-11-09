@@ -1,0 +1,38 @@
+
+/*CSS for the test page*/
+
+.well a {
+    cursor:pointer;
+    padding: 30px;
+}
+
+.well li:hover{
+    background-color: whitesmoke;
+}
+
+/*/*Animations
+
+.ng-enter {
+    -webkit-animation: fadeIn 0.5s both ease-in;
+    -moz-animation: fadeIn 0.5s both ease-in;
+    -o-animation: fadeIn 0.5s both ease-in;
+    animation: fadeIn 0.5s both ease-in;
+}
+
+.ng-leave{
+        -webkit-animation: fadeIn 0.5s both ease-in;
+    -moz-animation: fadeIn 0.5s both ease-in;
+    -o-animation: fadeIn 0.5s both ease-in;
+    animation: fadeIn 0.5s both ease-in;
+}
+
+/* fade in 
+@keyframes fadeIn {
+	from 		{ opacity: 0.3;}
+}
+@-moz-keyframes fadeIn {
+	from 		{ opacity: 0.3;}
+}
+@-webkit-keyframes fadeIn {
+	from 		{ opacity: 0.3; }
+}*/

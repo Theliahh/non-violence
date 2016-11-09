@@ -1,15 +1,23 @@
-﻿@{ 
-
+﻿@{
+    ViewBag.Title = "The Official NVT Website";
 }
 
-<div class="jumbotron">
-    <h1>The Non-violence Test</h1>
-    <p>
-        The Non-violence Test, created by Dr. Vinod K Kool was designed to measure a person's tendency
-        to act non-violently. The test consists of 65 questions. A total non-violent score, with a maximum
-        of 36, will be calculated based on your answers.
-    </p>
-    <p>
-        <a role=button class="btn btn-primary btn-lg">Take the Test</a>
-    </p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h1>The Non-violence Test</h1>
+            <p>
+                The Non-violence Test (NVT), created by Dr. Vinod K Kool and Dr. Manisha Sen, was designed to measure a person's orientation towards
+                nonviolence. The test consists of 65 questions. This computerized version of the NVT was created by Garrett Musto, software engineer, and
+                for any additional information, contact him at <a href="mailto:mustog@sunyit.edu">mustog@sunyit.edu</a>.
+                <br />
+                Prior written permission must be obtained from Garrett Musto before using or applying this test.
+                <br />
+                You are solely responsible for any unauthorized use of this test.
+            </p>
+            <p>
+                <a role=button class="btn btn-primary btn-lg" asp-controller="NVT" asp-action="Index">Take the Test</a>
+            </p>
+        </div>
+    </div>
 </div>

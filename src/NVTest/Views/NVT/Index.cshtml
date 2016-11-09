@@ -1,19 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-
+﻿@{
+    ViewBag.Title = "The Non-Violence Test";
 }
+<script src="~/ts/NVController.js"></script>
+<link rel="stylesheet" href="~/css/testStyle.css" />
 
-<div class="nvtContainer">
-    <div class="well">
-        Remember to answer the questions as truthfully as possible.
+<div class="nvtContainer" ng-controller="NVController as test">
+    <div class="well well-lg">
+        <p>
+            We are interested in your opinions on various issues. This questionnaire contains
+            65 statements. Each statement can be answered with one of two alternatives. Read each statement
+            carefully and choose the response that best describes the way you would respond to the situation.
+            Indicate your response by clicking on either "a" or "b". Please do not skip any question. Sometimes
+            you may be undecided or don't agree with the choices given. When this happens, select the answer
+            that is closest to your reaction; please do not skip any questions.
+        </p>
+
     </div>
-    <div class="well well">
-        (Question Number) (Question)
-        <ol>
-            <li>Choice 1</li>
-            <li>Choice 2</li>
-        </ol>
+    <div class="well">
+        {{test.Question.questionNumber}}. &nbsp; &nbsp; {{test.Question.questionText}}
+        <hr />
+        <br />
+        <div class="list-group">
+            <i  ng-show="test.isBusy" class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom" ng-class="{'fa-pulse' : test.isBusy}"></i>
+            <a  ng-hide="test.isBusy" class="list-group-item" ng-click="test.answeredQuestion(1)"> A. &nbsp; {{test.Question.firstChoice}}</a>
+            <a ng-hide="test.isBusy" class="list-group-item" ng-click="test.answeredQuestion(2)"> B. &nbsp; {{test.Question.secondChoice}}</a>
+        </div>
     </div> 
+    Progress: {{test.Question.questionNumber}}/65
+    <div class="progress progress-striped active">
+        <div class="progress-bar" style="width: {{(test.Question.questionNumber/65)*100}}%"></div>
+    </div>
 </div>
